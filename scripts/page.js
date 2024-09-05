@@ -47,16 +47,18 @@ Pages.forEach(Page => {
     Viewpage.addEventListener("click", function() {
         const Focused = this.getAttribute("focused") === "false";
 
-        this.style.position = Focused ? "absolute" : "relative";
-        this.style.height = Focused ? "100%" : "50%";
         this.setAttribute("focused", Focused);
+        this.style.height = Focused ? "512px" : "128px";
+        this.scrollIntoView({ behavior: "smooth", block: "start" });
+
         LongContentParagraph.style.opacity = Focused ? "1" : "0";
         TimestampLabel.style.opacity = Focused ? "0" : "1";
 
         Array.from(Content.getElementsByTagName("viewpage")).forEach(OtherViewpage => {
             if (OtherViewpage !== this) {
                 OtherViewpage.setAttribute("focused", "false");
-                OtherViewpage.style.display = Focused ? "none" : "block";
+                OtherViewpage.style.opacity = Focused ? "0.5" : "1";
+                OtherViewpage.style.pointerEvents = Focused ? "none" : "all";
             }
         }); 
 
@@ -69,3 +71,15 @@ Pages.forEach(Page => {
         Favicon.href = !AnyFocused ? "../images/Favicon.png" : "../images/PageFavicon.png";
     });
 });
+
+function Update() {
+    Array.from(Content.getElementsByTagName("viewpage")).forEach(Viewpage => {
+        const Focused = Viewpage.getAttribute("focused") === "false";
+        Viewpage.style.overflowY = Focused ? "hidden" : "scroll";
+        Viewpage.scrollTop = !Focused ? Viewpage.scrollTop : 0;
+    });
+    
+    requestAnimationFrame(Update);
+}
+
+Update();
