@@ -43,48 +43,9 @@ export const Pages = [
     },
     {
         Timestamp: "6.09.2024",
-        Title: "Nigga thinks that hes the main char",
-        Content: "Look at that nigga that thinks that hes the main char",
-        LongContent: "Watch out for that nigga that thinks that hes the main char",
-
-        Images: [
-            "https://preview.redd.it/bro-really-think-he-the-main-character-v0-e192mlgx1sya1.jpg?auto=webp&s=f4235f6771e67bfe55a81d50ba421b3c957df412",
-            "https://preview.redd.it/bro-really-think-he-the-main-character-v0-o53bxym5pxya1.jpeg?width=680&format=pjpg&auto=webp&s=5e0568a5b82d4204fa707df4ed6f2646dc1d3083"
-        ],
-
-        Click: () => {
-            return;
-        }
-    },
-    {
-        Timestamp: "6.09.2024",
-        Title: "Weird ass dude",
-        Content: "Dont look, damn",
-        LongContent: "Watch out for that nigga is weird as hell",
-
-        Images: [],
-
-        Click: () => {
-            return;
-        }
-    },
-    {
-        Timestamp: "6.09.2024",
         Title: "Sell me fent",
         Content: "i like the smell of it",
         LongContent: "what if i said please",
-
-        Images: [],
-
-        Click: () => {
-            return;
-        }
-    },
-    {
-        Timestamp: "6.09.2024",
-        Title: "Küm Studios Book Sale Doesn't Start Very Soon!",
-        Content: "The Küm Studios Book Manufacturing Doesn't Start Executing Very Soon!",
-        LongContent: "",
 
         Images: [],
 
